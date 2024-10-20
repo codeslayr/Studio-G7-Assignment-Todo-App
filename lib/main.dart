@@ -7,7 +7,7 @@ import 'package:studio_g7_assignment_todo_app/login_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: FirebaseOptions(
+    options: const FirebaseOptions(
       apiKey: 'AIzaSyA-QPGGjhP8GKC_lULalzgXjlpvUOnC6KQ',
       appId: '1:864344193877:web:49013cd83f6ff618f68ddc',
       messagingSenderId: '864344193877',
@@ -31,7 +31,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Todo App",
       theme: ThemeData(primarySwatch: Colors.grey, primaryColor: Colors.black),
-      home: _auth.currentUser != null ? HomeScreen() : LoginScreen(),
+      home:
+          _auth.currentUser != null ? const HomeScreen() : const LoginScreen(),
     );
   }
 }
