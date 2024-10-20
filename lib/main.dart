@@ -31,8 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Todo App",
       theme: ThemeData(primarySwatch: Colors.grey, primaryColor: Colors.black),
-      home:
-          _auth.currentUser != null ? const HomeScreen() : const LoginScreen(),
+      home: _auth.currentUser != null ? const HomeScreen() : LoginScreen(),
     );
   }
 }
